@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DataHandlerService } from './data-handler-service.service';
+import { DataHandlerService } from './data-handler.service';
 
-describe('DataHandlerServiceService', () => {
+describe('DataHandlerService', () => {
   let service: DataHandlerService;
 
   beforeEach(() => {
