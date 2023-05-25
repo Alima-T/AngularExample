@@ -10,13 +10,15 @@ import {BehaviorSubject} from "rxjs";
 export class DataHandlerService {
 
   tasksSubject = new BehaviorSubject<Task[]>(TestData.tasks);
+  categoriesSubject = new BehaviorSubject<Category[]>(TestData.categories);
 
-  constructor(){}
-
-  getCategory(): Category[] {
-    return TestData.categories;
+  constructor(){
+    // this.fillTasks()//не увидела разницу
   }
 
+  // getCategory(): Category[] {
+  //   return TestData.categories;
+  // }
 
   // getTask(): Task[]{
   //   return TestData.tasks;
