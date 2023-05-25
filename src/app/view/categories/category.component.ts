@@ -19,9 +19,10 @@ export class CategoryComponent implements OnInit{
     this.categories = this.dataHandler.getCategory();
     //displaying all categories in the browser developer tools
     // console.log(this.categories)
-
     // Injection of categories in html
-
   }
 
+  displayTasksByCategory(category: Category) {
+    this.dataHandler.fillTasksByCategory(category);
+  }
 }
