@@ -11,8 +11,7 @@ export class DataHandlerService {
 
   tasksSubject = new BehaviorSubject<Task[]>(TestData.tasks);
 
-  constructor() {
-  }
+  constructor(){}
 
   getCategory(): Category[] {
     return TestData.categories;
@@ -24,7 +23,7 @@ export class DataHandlerService {
   // }
 
   // instead of getTask
-  fillTasks() {
+  fillTasks(){
     this.tasksSubject.next(TestData.tasks);
   }
 
@@ -37,7 +36,6 @@ export class DataHandlerService {
   fillTasksByCategory(category: Category) {
     this.tasksSubject.next(TestData.tasks.filter(task => task.category === category))
   }
-
 
 }
 
