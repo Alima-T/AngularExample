@@ -22,7 +22,7 @@
           <td>{{task.title}}</td>
           <td>{{task.priority?.title? task.priority?.title : "No priority"}}</td>
           <td>{{task.category?.title? task.category?.title : "No category"}}</td>
-          <td>{{task.date? task.date : "No date"}}</td>
+          <td>{{task.date? (task.date | date : 'medium'): "No date"}}</td>
             <td>{{task.completed}}</td>
           </tr>
           </tbody>
