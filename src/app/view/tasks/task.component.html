@@ -8,21 +8,22 @@
       <div class="card-body table-responsive">
         <table class="table table-hover">
           <thead class="text-warning">
-            <th>ID</th>
+            <th>#</th>
             <th>Name</th>
-            <th>Status</th>
             <th>Priority</th>
             <th>Category</th>
             <th>Date</th>
+            <th>Status</th>
           </thead>
           <tbody>
-          <tr class="nav-item" *ngFor="let task of tasks">
-          <td>{{task.id}}</td>
+          <!--Angular provides the reserved index keyword inside the ngFor expression, on every step index iterates-->
+          <tr class="nav-item" *ngFor="let task of tasks; let i = index">
+          <td>{{i+1}}</td>
           <td>{{task.title}}</td>
-          <td>{{task.completed}}</td>
-          <td>{{task.priority}}</td>
-          <td>{{task.category}}</td>
-          <td>{{task.date}}</td>
+          <td>{{task.priority?.title? task.priority?.title : "No priority"}}</td>
+          <td>{{task.category?.title? task.category?.title : "No category"}}</td>
+          <td>{{task.date? (task.date | date : 'short'): "No date"}}</td>
+            <td>{{task.completed}}</td>
           </tr>
           </tbody>
         </table>
