@@ -20,4 +20,8 @@ export class TaskComponent implements OnInit{
   }
 
 
+  markTaskCompleted(task: Task){
+    task.completed = !task.completed;
+  }
+
 }

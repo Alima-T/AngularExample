@@ -1,3 +1,7 @@
 .novalue {
   opacity: 0.5;
 }
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
