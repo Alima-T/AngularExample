@@ -24,6 +24,14 @@
             <td [class.novalue]="task.category ==null">{{task.category?.title !==null? task.category?.title : "No category"}}</td>
             <td [class.novalue]="task.date ==null">{{task.date !==null? (task.date | date : 'short'): "No date"}}</td>
             <td>{{task.completed}}</td>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" value="" [checked]="task.completed"> <!--[] to take the value of the variable (not name) -->
+                  <span class="form-check-sign">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
           </tr>
           </tbody>
         </table>
