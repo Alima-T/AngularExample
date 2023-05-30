@@ -5,13 +5,14 @@ import {Category} from "./Category";
  *@author Alima-T 4/24/2023
  */
 
-export class Task{
+export class Task {
   id: number;
   title: string;
   completed: boolean;
   priority?: Priority;
   category?: Category;
   date?: Date;
+
 //? - optional field
   constructor(id: number, title: string, status: boolean, priority?: Priority, category?: Category, date?: Date) {
     this.id = id;
