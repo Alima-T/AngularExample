@@ -2,6 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {DataHandlerService} from "../../service/data-handler.service";
 import {Category} from "../../model/Category";
 
+/**
+ *@author Alima-T 5/22/2023
+ */
+
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',

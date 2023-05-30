@@ -5,6 +5,10 @@ import {AppComponent} from './app.component';
 import {CategoryComponent} from './view/categories/category.component';
 import {TaskComponent} from './view/tasks/task.component';
 
+/**
+ *@author Alima-T 4/23/2023
+ */
+
 @NgModule({
   declarations: [
     AppComponent,
