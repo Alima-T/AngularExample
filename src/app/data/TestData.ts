@@ -38,7 +38,7 @@ export class TestData {
   static tasks: Task[] = [
     {
       id: 1,
-      title: "Sign up to the dance class",
+      title: "Записаться на танцы",
       priority: TestData.priorities[2],
       completed: false,
       category: TestData.categories[9],

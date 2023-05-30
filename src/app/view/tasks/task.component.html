@@ -21,10 +21,10 @@
             <td>{{i + 1}}</td>
             <td>{{task.title}}</td>
             <td
-              [class.novalue]="task.priority ==null">{{task.priority?.title !== null ? task.priority?.title : "No priority"}}</td>
+              [class.novalue]="task.priority ==null">{{task.priority?.title !== null ? task.priority?.title : "Без приоритета"}}</td>
             <td
-              [class.novalue]="task.category ==null">{{task.category?.title !== null ? task.category?.title : "No category"}}</td>
-            <td [class.novalue]="task.date ==null">{{task.date == null ? "No date" : (task.date | date: 'short')}}</td>
+              [class.novalue]="task.category ==null">{{task.category?.title !== null ? task.category?.title : "Без категории"}}</td>
+            <td [class.novalue]="task.date ==null">{{task.date == null ? "Без даты" : (task.date | date: 'short')}}</td>
             <div class="form-check">
               <label class="form-check-label">
                 <input (click)="markTaskCompleted(task)" [checked]="task.completed" class="form-check-input" type="checkbox"

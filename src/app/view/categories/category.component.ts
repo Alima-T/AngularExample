@@ -24,10 +24,6 @@ export class CategoryComponent implements OnInit {
 // the method is automatically called when creating an instance of the Category Components component
   ngOnInit() {
     this.dataHandler.categoriesSubject.subscribe(categories => this.categories = categories);
-    // this.categories = this.dataHandler.getCategory();
-    //displaying all categories in the browser developer tools
-    // console.log(this.categories)
-    // Injection of categories in html
   }
 
   displayTasksByCategory(category: Category) {
