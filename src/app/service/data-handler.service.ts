@@ -12,7 +12,7 @@ export class DataHandlerService {
   tasksSubject = new BehaviorSubject<Task[]>(TestData.tasks);
   categoriesSubject = new BehaviorSubject<Category[]>(TestData.categories);
 
-  constructor(){
+  constructor() {
     // this.fillTasks()//не увидела разницу
   }
 
@@ -25,7 +25,7 @@ export class DataHandlerService {
   // }
 
   // instead of getTask
-  fillTasks(){
+  fillTasks() {
     this.tasksSubject.next(TestData.tasks);
   }
 

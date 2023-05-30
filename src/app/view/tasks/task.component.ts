@@ -7,7 +7,7 @@ import {Task} from "../../model/Task";
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css']
 })
-export class TaskComponent implements OnInit{
+export class TaskComponent implements OnInit {
   tasks: Task[] = [];
 
   constructor(private dataHandler: DataHandlerService) {
@@ -16,11 +16,10 @@ export class TaskComponent implements OnInit{
   ngOnInit(): void {
     // this.tasks=this.dataHandler.getTask()
     //add subscriber
-    this.dataHandler.tasksSubject.subscribe(tasks=>this.tasks=tasks);
+    this.dataHandler.tasksSubject.subscribe(tasks => this.tasks = tasks);
   }
 
-
-  markTaskCompleted(task: Task){
+  markTaskCompleted(task: Task) {
     task.completed = !task.completed;
   }
 
