@@ -46,5 +46,10 @@ export class DataHandlerService {
     this.tasksSubject.next(TestData.tasks.filter(task => task.category === category))
   }
 
+  // indicatePriorityByUrgancy(priority: Priority) {
+  //   this.prioritiesSubject.next(TestData.priorities.filter((priority=>task.priority===priority)))
+  //     .next(TestData.tasks.filter(task => task.category === category))
+  // }
+
 }
 

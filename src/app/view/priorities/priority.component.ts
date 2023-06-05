@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Priority} from "../../model/Priority";
+import {Task} from "../../model/Task";
+import {Urgency} from "../../Urgency";
 import {DataHandlerService} from "../../service/data-handler.service";
 
 /**
@@ -14,6 +16,8 @@ import {DataHandlerService} from "../../service/data-handler.service";
 export class PriorityComponent implements OnInit{
 
   priorities: Priority[]=[];
+  selectedPriority: Priority | undefined;
+  selectedTask: Task | undefined;
 
 constructor(private dataHandler: DataHandlerService) {
 }
@@ -22,7 +26,17 @@ constructor(private dataHandler: DataHandlerService) {
   this.dataHandler.prioritiesSubject.subscribe(priorities=>this.priorities=priorities)
   }
 
-  indicatePriorityByUrgancy (priority: Priority){
+  indicatePriorityByUrgancy (urgency: Urgency){
+    switch (urgency) {
+      case Urgency.ExtraHigh:
+        break;
+      case Urgency.High:
+        break;
+      case Urgency.Medium:
+        break;
+      case Urgency.Low:
+        break;
 
+    }
   }
 }
