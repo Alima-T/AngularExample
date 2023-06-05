@@ -3,6 +3,7 @@ import {Category} from "../model/Category";
 import {TestData} from "../data/TestData";
 import {Task} from '../model/Task';
 import {BehaviorSubject} from "rxjs";
+import {Priority} from "../model/Priority";
 
 /**
  *@author Alima-T 5/22/2023
@@ -15,6 +16,8 @@ export class DataHandlerService {
 
   tasksSubject = new BehaviorSubject<Task[]>(TestData.tasks);
   categoriesSubject = new BehaviorSubject<Category[]>(TestData.categories);
+  prioritiesSubject = new BehaviorSubject<Priority[]>(TestData.priorities);
+
 
   constructor() {
     // this.fillTasks()//не увидела разницу
@@ -42,6 +45,11 @@ export class DataHandlerService {
   fillTasksByCategory(category: Category) {
     this.tasksSubject.next(TestData.tasks.filter(task => task.category === category))
   }
+
+  // indicatePriorityByUrgancy(priority: Priority) {
+  //   this.prioritiesSubject.next(TestData.priorities.filter((priority=>task.priority===priority)))
+  //     .next(TestData.tasks.filter(task => task.category === category))
+  // }
 
 }
 
